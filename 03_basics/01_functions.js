@@ -48,7 +48,33 @@ function LoginUserMessage(username){
 }
 
 // console.log(LoginUserMessage("Tushankar"))
-console.log(LoginUserMessage())
+// console.log(LoginUserMessage())
+
+
+function calculateCartPrice(...num1){
+    return num1
+}
+
+// console.log(calculateCartPrice(200))
+// if cart is increaising as you are taking more and more and you have taken only one parameter
+//To solve this we have rest or spread operator ... jitna item mila hai sabko bundle me pack karo aur dedo
+//it will give array of these and add on more
+console.log(calculateCartPrice(200, 400, 600))
+
+const user = {
+    userName: "Tushankar",
+    Price: 199
+}
+
+function handleObj(AnyObj){
+    console.log(`Username is ${AnyObj.userName} and price is ${AnyObj.Price}`)
+}
+
+handleObj(user)
+
+
+
+
 
 
 
