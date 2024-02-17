@@ -1,0 +1,78 @@
+Javascript Excecution context-> jo bhi file banaia ap wo javascript kese run aur execute karegi
+Javascript run in 2 phases.
+
+when we write a code first of all global excution context will be made and the places where GEC will
+be made then usko refer kardia jayega variable this ko, This stores the gce, when we run in browser
+the GEC of browser is different from nodejs vs code .
+
+Executes in thread.Javascript is single threaded
+
+-=> GLOBAL EXECUTION CONTEXT 
+-=> FUNCTION EXECUTION CONTEXT
+
+first code written  -runs in 2 phases
+1. memory creation phase/creation phase -variables ke liye jaga allocate hote he execute nahi hote
+   
+   addition subtriction will work in execution phase onlyu memory allocation
+   step1. global execution (jobhi code run hota hei wo global excution se run hota hai)
+                   ||
+    It allocates firstly in this
+                   ||
+                phase 2 creation phase memory phase
+                   ||
+suppose , val1 lekha he to is variable pe undeifined rakha hoga
+                   ||
+suppose, we create an function addnum then addnum ke pass jayega function defination 
+                   ||
+result 1 and result 2 variables hai aur uske andar jayega undefined from the function 
+                   ||
+                Phase 2
+                   ||
+          2. Excecution phase
+                   ||
+firstly val 1 ke andar val 2 ke andar unke valyue jayega like 5, 10  and then addnum 
+iske pas kuch nahi jayega as its not for execution
+                   ||
+        in result 1 = ke addNUM(val1, val2) function which makes \
+its own new exuction context box = here new variable enviroment
+and executiont thread will be build, jitni baar executes bante he utni bar'
+box crete hopte he, again memory creation phase and execution phase willbe
+run for the function
+
+1.first memory phase
+val 1 ->undeifined
+val 2 -> undefined 
+in function of addnum there is a variable total
+total ->undefined
+
+then 2nd phase 
+2.EXECUTION
+data malupulates
+num1 = 10 val1 is my num1
+num2 = 5
+
+total add hoke 15 jayegi
+
+and total also return back to parent excution context
+After the work is done they get deleted 
+Then result 1 has value = 15;
+
+now we have line 8
+result 2 = addNum(10,2)
+then result 2 will go exactly like result 1 
+box will be created
+
+
+
+
+
+
+
+
+CALL STACK
+->in stack one by one will be filled 
+if we have 3 methods like
+one()
+two()
+three()
+
