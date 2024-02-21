@@ -5,6 +5,8 @@ const myNums = [1, 2, 3]
 //     return acc + currval
 // }, 0)
 
+
+//it helps in shppping cart
 const myTotal = myNums.reduce( (acc, curr) => acc+curr, 0)
 
 console.log(myTotal);
