@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Unlimited Colour generation</title>
+    <style>
+
+.Nav{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgb(188, 187, 187);
+   
+    
+  }
+  .home{
+    padding-top: 0.5rem;
+    padding-left: 2.8rem;
+    padding-right: 2.8rem;
+    padding-bottom: 0.5rem;
+    background-color: gray;
+    text-decoration: none;
+    color: black;
+    border: 1px solid rgb(48, 48, 48);
+    border-radius: 2px;
+
+  }
+
+  .Youtube{
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+    background-color: rgb(230, 229, 229);
+    text-decoration: none;
+    color: black;
+    border: 1px solid gray;
+    border-radius: 2px;
+  }
+        
+    </style>
+
+  </head>
+
+  <body style="background-color: #212121; color: #fff">
+ 
+    
+    <nav class="Nav">
+
+        <a href="/" aria-current="page" class="home">Home</a>
+        <a target="_blank"  class="Youtube" href="https://www.youtube.com/@chaiaurcode">Youtube channel</a>
+  
+    </nav>
+    
+    <h1>Start should change the Background color every second</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script src="chaiaurcode.js"></script>
+
+    <script>
+        
+//generate a random color
+
+const randomColor = function () {
+  const hex = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+
+let intervalId;
+const startChangingColor = function () {
+  if (!intervalId) {
+    intervalId = setInterval(changeBgColor, 1000);
+  }
+
+  function changeBgColor() {
+    document.body.style.backgroundColor = randomColor();
+  }
+};
+const stopChangingColor = function () {
+  clearInterval(intervalId);
+  intervalId = null;
+};
+
+document.querySelector('#start').addEventListener('click', startChangingColor);
+
+document.querySelector('#stop').addEventListener('click', stopChangingColor);
+
+
+
+    </script>
+
+  </body>
+</html>
