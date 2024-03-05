@@ -1,0 +1,24 @@
+##JavaScript and classes
+
+=> JavaScript doesnot have classes , it is primarily a prototype-based-langauge
+   . Classes are primarily syntactic sugar . Behond the scenes all are run under 
+   prototypes 
+
+## OPP is a programming paradyme 
+## -> Collections of properties and methods
+   -> toLowerCase
+
+## Why use OOP 
+## Parts of OOP
+Objecr literal , constructor
+
+->Constructor function
+->prototypes
+->Classes
+->Instances (new , this)
+
+## 4 Pillars 
+->Abstraction(Details hide like fetch)
+->Encapsulation(Wrapper)
+->Inheritance
+->Polymorphism 
