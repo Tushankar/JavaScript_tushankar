@@ -62,8 +62,9 @@
     <button id="start">Start</button>
     <button id="stop">Stop</button>
     <script src="chaiaurcode.js"></script>
+  </body>
 
-    <script>
+<script>
         
 //generate a random color
 
@@ -77,6 +78,7 @@ const randomColor = function () {
 };
 
 let intervalId;
+
 const startChangingColor = function () {
   if (!intervalId) {
     intervalId = setInterval(changeBgColor, 1000);
@@ -99,5 +101,5 @@ document.querySelector('#stop').addEventListener('click', stopChangingColor);
 
     </script>
 
-  </body>
+
 </html>

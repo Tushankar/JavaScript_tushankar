@@ -19,6 +19,8 @@
    </div>
 </body>
 <script>
+
+
     // document.getElementById('owl').onclick = function(){
     //     alert("owl clicked")
     // }
@@ -40,7 +42,7 @@
     //     e.stopPropagation()
     // }, false)
     
-    // document.getElementById('google').addEventListener('click',function(e){
+    // document.getElementById('#google').addEventListener('click',function(e){
     //     e.preventDefault();
     //     e.stopPropagation()
     //     console.log("google clicked");
@@ -54,10 +56,9 @@
             let removeIt = e.target.parentNode
             removeIt.remove()
         }
-    
-        
+
     })
     
-    //removeIt.parentNode.removeChild(removeIt)
+    removeIt.parentNode.removeChild(removeIt)
 </script>
 </html>
