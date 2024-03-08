@@ -1,0 +1,32 @@
+There are two stacks
+
+Main stacks and side stacks
+
+Syncronazed code alawys moved to main stacks
+
+When main stack gets empty then it cheks on side stack if the  
+the answer arrived or not  if its arrived then it will go to ms
+
+Event loop gets information from the ms to ss
+
+// callbacks are those which runs after the completion of async code
+
+// fetch : ‘ https:/ facebook.com
+Sends a request to faceboo server to get some datas
+
+Axios
+Fetch
+Set timeout
+Set interval
+Xhml request 
+Promises
+
+
+All these are async codes To run their and we need call backs, then catch , async awaits
+
+Promises ka sath yesa hai ki kuch codes hum likhenge aur future
+me agar chalega toh  resolve if promise doesnot complete then reject
+
+When we are trying to write async await then make the nearest function async
+And if we write inside it anything the function suppose i write fetch then uske
+age await lagao by this we dont have to write then here
